@@ -1,0 +1,50 @@
+.employee-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.employee-details {
+    order: 1;
+    text-align: left;
+}
+
+.employee-row .employee-photo {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.left-align .employee-details {
+    text-align: left;
+}
+
+.left-align .employee-photo {
+    background-image: url("https://picsum.photos/200/300");
+}
+
+.right-align .employee-details {
+    text-align: right;
+    margin-left: auto;
+}
+
+.right-align .employee-photo {
+    background-image: url("https://picsum.photos/200/300");
+    margin-left: 20px;
+    order: 2;
+}
+
+/* Центрируем фото по вертикали и горизонтали */
+.employee-photo::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+
