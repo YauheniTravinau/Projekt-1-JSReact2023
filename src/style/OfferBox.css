@@ -1,61 +1,4 @@
-
-/* Lista ofert*/
-.offers-section {
-    height: 40vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
-
-.offer-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.employees-section {
-    padding: 20px;
-}
-
-/* OfferBox Lista ofert*/
-.offer-box {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    max-width: 400px;
-    transition: transform 0.5s;
-}
-
-.offer-box:hover {
-    transform: scale(1.05);
-}
-
-/*красная кнопка*/
-.red-dot {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: red;
-}
-
-.red-button {
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    border-radius: 50%;
-}
-
+/* OfferBox Lista ofert */
 .offer-box {
     position: relative;
     background-color: #fff;
@@ -65,6 +8,28 @@
     margin-bottom: 20px;
     max-width: 400px;
     transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.offer-box:hover {
+    transform: scale(1.05);
+}
+
+.offer-box::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.offer-box:hover::before {
+    opacity: 1;
 }
 
 .new-dot {
@@ -98,4 +63,3 @@
 .offer-box:hover {
     transform: scale(1.05);
 }
-

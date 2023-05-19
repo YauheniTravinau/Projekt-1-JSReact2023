@@ -35,19 +35,6 @@ const offers = [
         title: 'Offer 6',
         description: 'Description for Offer 6',
     },
-    {
-        id: 7,
-        isNew: false,
-        title: 'Offer 7',
-        description: 'Description for Offer 7',
-    },
-    {
-        id: 8,
-        isNew: false,
-        title: 'Offer 8',
-        description: 'Description for Offer 8',
-    },
-
 ];
 
 export default offers;

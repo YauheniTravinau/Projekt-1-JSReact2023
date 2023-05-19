@@ -1,0 +1,72 @@
+/* Menu button */
+.menu-icon {
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+    position: relative;
+    z-index: 2;
+}
+
+.menu-icon:hover {
+    color: #ff0000;
+}
+
+.menu-items ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-items li {
+    margin-bottom: 10px;
+}
+
+.menu-items a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-items button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+/* Disabled "Contact" button */
+.menu-items button[disabled] {
+    cursor: not-allowed;
+}
+
+/* Styling on hover for buttons */
+.menu-items button:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+.menu-icon {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    transition: background-color 0.3s;
+    position: relative;
+    display: inline-block;
+}
+
+.menu-items {
+    position: absolute;
+    top: 20px;
+    right: 810px;
+    width: 100px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+}
+
+.menu-icon.active + .menu-items {
+    display: block;
+}
