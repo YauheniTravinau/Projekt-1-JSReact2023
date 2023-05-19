@@ -21,14 +21,14 @@ const Navigation = ({ isMenuOpen, handleMenuItemClick }) => {
                     <div className="menu-items">
                         <ul>
                             <li>
-                                <button type="button" onClick={() => handleMenuItemClick('about-section')}>
-                                    <a>O nas</a>
-                                </button>
+                                <a href="#about-section" onClick={() => handleMenuItemClick('about-section')}>
+                                    O nas
+                                </a>
                             </li>
                             <li>
-                                <button type="button" onClick={() => handleMenuItemClick('offer-section')}>
-                                    <a>Oferta</a>
-                                </button>
+                                <a href="#offer-section" onClick={() => handleMenuItemClick('offer-section')}>
+                                    Oferta
+                                </a>
                             </li>
                             <li style={{ cursor: 'not-allowed' }}>
                                 <button type="button" disabled>
