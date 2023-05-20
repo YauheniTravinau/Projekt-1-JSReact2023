@@ -1,5 +1,3 @@
-/* Код для десктопного режима */
-
 .employee-row {
     display: flex;
     align-items: center;
@@ -49,7 +47,7 @@
 }
 
 /* Код для мобильного режима */
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .employee-row {
         flex-direction: column;
         align-items: center;

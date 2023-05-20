@@ -76,7 +76,7 @@
 }
 
 /* Media queries for responsive design */
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .container {
         width: auto;
         padding: 0 10px;
@@ -97,7 +97,6 @@
         z-index: 9999;
         margin-top: 10px;
         min-width: 150px;
-        max-width: 50px;
     }
 
     .menu-icon.active + .menu-items {
@@ -107,6 +106,28 @@
     .menu-items ul {
         margin-left: 0;
     }
+
+    /* Disable "Contact" button on mobile */
+    .menu-items button.contact-button[disabled] {
+        cursor: not-allowed;
+    }
 }
+/* Additional styles for screens between 768px and 1000px */
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+    .container {
+        width: auto;
+        padding: 0 10px;
+    }
+
+    .menu-icon.active + .menu-items {
+        display: block;
+    }
+
+    .menu-items ul {
+        margin-left: 0;
+    }
+
+}
+
 
 
