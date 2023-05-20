@@ -10,25 +10,35 @@ const Navigation = ({ isMenuOpen, handleMenuItemClick }) => {
         setMenuOpen((prevState) => !prevState);
     };
 
+    const handleClick = (sectionId) => {
+        handleMenuItemClick(sectionId);
+        if (sectionId === 'about-section') {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+            });
+        }
+    };
+
     return (
         <header className="header">
             <div className="container header-content">
                 <h3>My Project</h3>
-                <div className={`menu-icon ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
-                    <FontAwesomeIcon icon={faBars} />
-                </div>
-                {menuOpen && (
-                    <div className="menu-items">
+                <div className="menu-container">
+                    <div className={`menu-icon ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+                        <FontAwesomeIcon icon={faBars} />
+                    </div>
+                    <div className={`menu-items ${menuOpen ? 'open' : ''}`}>
                         <ul>
                             <li>
-                                <a href="#about-section" onClick={() => handleMenuItemClick('about-section')}>
-                                    O nas
-                                </a>
+                                <button type="button" onClick={() => handleClick('about-section')}>
+                                    <a>O nas</a>
+                                </button>
                             </li>
                             <li>
-                                <a href="#offer-section" onClick={() => handleMenuItemClick('offer-section')}>
-                                    Oferta
-                                </a>
+                                <button type="button" onClick={() => handleClick('offer-section')}>
+                                    <a>Oferta</a>
+                                </button>
                             </li>
                             <li style={{ cursor: 'not-allowed' }}>
                                 <button type="button" disabled>
@@ -37,7 +47,7 @@ const Navigation = ({ isMenuOpen, handleMenuItemClick }) => {
                             </li>
                         </ul>
                     </div>
-                )}
+                </div>
             </div>
         </header>
     );

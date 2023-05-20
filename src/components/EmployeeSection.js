@@ -16,7 +16,7 @@ const EmployeeSection = () => {
                         position={employee.position}
                         description={employee.description}
                         photo={employee.photo}
-                        isRightAligned={index === 1} // Второй работник будет выровнен справа и ниже
+                        isRightAligned={index === 1}
                     />
                 ))}
             </div>

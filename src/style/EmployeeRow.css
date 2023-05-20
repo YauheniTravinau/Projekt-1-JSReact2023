@@ -1,3 +1,5 @@
+/* Код для десктопного режима */
+
 .employee-row {
     display: flex;
     align-items: center;
@@ -39,7 +41,6 @@
     order: 2;
 }
 
-/* Центрируем фото по вертикали и горизонтали */
 .employee-photo::after {
     content: "";
     display: inline-block;
@@ -47,4 +48,54 @@
     height: 100%;
 }
 
+/* Код для мобильного режима */
+@media (max-width: 768px) {
+    .employee-row {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
 
+    .employee-details {
+        order: 2;
+        text-align: center;
+    }
+
+    .employee-row .employee-photo {
+        width: 150px;
+        height: 150px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .left-align .employee-details,
+    .right-align .employee-details {
+        text-align: center;
+    }
+
+    .left-align .employee-photo,
+    .right-align .employee-photo {
+        margin: 0;
+    }
+
+    .employee-details {
+        width: 100%;
+    }
+
+    .employee-row .employee-photo {
+        order: 0;
+        margin-bottom: 10px;
+    }
+
+    .employee-row .employee-details:nth-child(even) {
+        order: -1;
+    }
+
+    .employee-row .employee-photo:nth-child(even) {
+        order: -2;
+    }
+
+    .employee-row {
+        justify-content: center;
+    }
+}

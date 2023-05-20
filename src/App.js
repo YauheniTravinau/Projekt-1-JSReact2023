@@ -4,10 +4,7 @@ import Header from './components/Header';
 import EmployeeSection from './components/EmployeeSection';
 import OfferSection from './components/OfferSection';
 import Footer from './components/Footer';
-import OfferBox from './components/OfferBox';
-import EmployeeRow from './components/EmployeeRow';
-import offers from './data/offers';
-import employees from './data/employees';
+
 
 import './styles.css';
 
@@ -25,8 +22,6 @@ const App = () => {
         }
     };
 
-
-
     return (
         <div>
             <Navigation
@@ -35,29 +30,8 @@ const App = () => {
                 handleMenuItemClick={handleMenuItemClick}
             />
             <Header handleMenuItemClick={handleMenuItemClick} />
-            <EmployeeSection>
-                {employees.map((employee) => (
-                    <EmployeeRow
-                        key={employee.id}
-                        name={employee.name}
-                        surname={employee.surname}
-                        position={employee.position}
-                        description={employee.description}
-                        photo={employee.photo}
-                        isRightAligned={false}
-                    />
-                ))}
-            </EmployeeSection>
-            <OfferSection>
-                {offers.map((offer) => (
-                    <OfferBox
-                        key={offer.id}
-                        isNew={offer.isNew}
-                        title={offer.title}
-                        description={offer.description}
-                    />
-                ))}
-            </OfferSection>
+            <EmployeeSection />
+            <OfferSection />
             <Footer />
         </div>
     );
