@@ -32,12 +32,12 @@ const Navigation = ({ isMenuOpen, handleMenuItemClick }) => {
                         <ul>
                             <li>
                                 <button type="button" onClick={() => handleClick('about-section')}>
-                                    <a>O nas</a>
+                                    O nas
                                 </button>
                             </li>
                             <li>
                                 <button type="button" onClick={() => handleClick('offer-section')}>
-                                    <a>Oferta</a>
+                                    Oferta
                                 </button>
                             </li>
                             <li style={{ cursor: 'not-allowed' }}>
