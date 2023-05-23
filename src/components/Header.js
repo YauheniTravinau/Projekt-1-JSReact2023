@@ -1,5 +1,5 @@
-import React from 'react';
 import '../style/Header.css';
+
 
 const Header = ({ handleMenuItemClick }) => {
     return (
@@ -9,9 +9,9 @@ const Header = ({ handleMenuItemClick }) => {
                     <div className="about-content">
                         <h3 className="about-title">Nasza firma oferuje najwyższej jakości produkty.</h3>
                         <p className="about-subtitle">Nie wierz nam na słowo - sprawdź.</p>
-                        <button className="about-button" onClick={() => handleMenuItemClick('offer-section')}>
+                        <a href="#offer-section" className="about-button" onClick={() => handleMenuItemClick('offer-section')}>
                             Oferta
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -20,3 +20,4 @@ const Header = ({ handleMenuItemClick }) => {
 };
 
 export default Header;
+

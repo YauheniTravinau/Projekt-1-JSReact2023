@@ -3,10 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import '../style/Navigation.css';
 
-
-
 const Navigation = ({ isMenuOpen, handleMenuItemClick }) => {
     const [menuOpen, setMenuOpen] = useState(isMenuOpen);
+    const [activeSection, setActiveSection] = useState('');
 
     const toggleMenu = () => {
         setMenuOpen((prevState) => !prevState);
@@ -22,6 +21,10 @@ const Navigation = ({ isMenuOpen, handleMenuItemClick }) => {
         }
     };
 
+    const handleSectionChange = (sectionId) => {
+        setActiveSection(sectionId);
+    };
+
     return (
         <header className="header">
             <div className="container header-content">
@@ -33,19 +36,40 @@ const Navigation = ({ isMenuOpen, handleMenuItemClick }) => {
                     <div className={`menu-items ${menuOpen ? 'open' : ''}`}>
                         <ul>
                             <li>
-                                <button type="button" onClick={() => handleClick('about-section')}>
+                                <a
+                                    href="#about-section"
+                                    className={activeSection === 'about-section' ? 'active' : ''}
+                                    onClick={() => {
+                                        handleClick('about-section');
+                                        handleSectionChange('about-section');
+                                    }}
+                                >
                                     O nas
-                                </button>
+                                </a>
                             </li>
                             <li>
-                                <button type="button" onClick={() => handleClick('offer-section')}>
+                                <a
+                                    href="#offer-section"
+                                    className={activeSection === 'offer-section' ? 'active' : ''}
+                                    onClick={() => {
+                                        handleClick('offer-section');
+                                        handleSectionChange('offer-section');
+                                    }}
+                                >
                                     Oferta
-                                </button>
+                                </a>
                             </li>
-                            <li style={{ cursor: 'not-allowed' }}>
-                                <button type="button" disabled>
+                            <li>
+                                <a
+                                    href="#contact-section"
+                                    className={`${
+                                        activeSection === 'contact-section' ? 'active' : 'disabled'
+                                    }`}
+                                    onClick={() => handleClick('contact-section')}
+                                    disabled
+                                >
                                     Kontakt
-                                </button>
+                                </a>
                             </li>
                         </ul>
                     </div>

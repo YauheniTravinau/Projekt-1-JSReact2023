@@ -1,14 +1,17 @@
+/* Styl dla wiersza pracownika */
 .employee-row {
     display: flex;
     align-items: center;
     margin-bottom: 100px;
 }
 
+/* Styl dla szczegółów pracownika */
 .employee-details {
     order: 1;
     text-align: left;
 }
 
+/* Styl dla zdjęcia pracownika w wierszu pracownika */
 .employee-row .employee-photo {
     width: 200px;
     height: 200px;
@@ -20,25 +23,30 @@
     margin-bottom: 10px;
 }
 
+/* Styl dla lewego wyrównania dla szczegółów pracownika */
 .left-align .employee-details {
     text-align: left;
 }
 
+/* Styl dla lewego wyrównania dla zdjęcia pracownika */
 .left-align .employee-photo {
     background-image: url("https://picsum.photos/200/300");
 }
 
+/* Styl dla prawego wyrównania dla szczegółów pracownika */
 .right-align .employee-details {
     text-align: right;
     margin-left: auto;
 }
 
+/* Styl dla prawego wyrównania dla zdjęcia pracownika */
 .right-align .employee-photo {
     background-image: url("https://picsum.photos/200/300");
     margin-left: 20px;
     order: 2;
 }
 
+/* Pseudo-element dla zdjęcia pracownika */
 .employee-photo::after {
     content: "";
     display: inline-block;
@@ -46,7 +54,7 @@
     height: 100%;
 }
 
-/* Код для мобильного режима */
+/* Kod dla trybu mobilnego */
 @media only screen and (max-width: 768px) {
     .employee-row {
         flex-direction: column;

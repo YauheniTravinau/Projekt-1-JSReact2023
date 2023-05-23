@@ -1,4 +1,3 @@
-import React from 'react';
 import EmployeeRow from '../components/EmployeeRow';
 import employees from '../data/employees';
 import '../style/EmployeeSection.css';

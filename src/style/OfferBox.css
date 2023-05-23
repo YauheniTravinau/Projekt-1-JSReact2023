@@ -1,4 +1,6 @@
-/* OfferBox Lista ofert */
+
+
+/* Styl pojedynczego boxa oferty */
 .offer-box {
     position: relative;
     background-color: #fff;
@@ -15,6 +17,7 @@
     transform: scale(1.05);
 }
 
+/* Styl kropki oznaczającej nową ofertę */
 .offer-box::before {
     content: '';
     position: absolute;
@@ -32,6 +35,7 @@
     opacity: 1;
 }
 
+/* Styl tekstu na kropce oznaczającej nową ofertę */
 .new-dot {
     position: absolute;
     top: 0;
@@ -49,11 +53,13 @@
     margin-left: 5px;
 }
 
+/* Styl tytułu oferty */
 .offer-box h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
+/* Styl opisu oferty */
 .offer-box p {
     font-size: 16px;
     color: #888;

@@ -27,11 +27,6 @@
 }
 
 /* Photo section */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
 
 .photo-section {
     flex: 1;
@@ -46,7 +41,6 @@ html, body {
     padding: 0;
 }
 
-/* Задний фон для первой части экрана */
 .about-section {
     position: relative;
     height: 100vh;
@@ -122,4 +116,3 @@ html, body {
     background-color: #fff;
     color: #000;
 }
-
