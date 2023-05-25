@@ -1,12 +1,12 @@
 import EmployeeRow from '../components/EmployeeRow';
 import employees from '../data/employees';
-import '../style/EmployeeSection.css';
+import '../components/EmployeeSection.css';
 
 const EmployeeSection = () => {
     return (
-        <section className="employees-section">
+        <section id="employees-section" className="employees-section">
             <div className="container">
-                <h2>Lista pracownikow</h2>
+                <h2>Lista pracowników</h2>
                 {employees.map((employee, index) => (
                     <EmployeeRow
                         key={employee.id}

@@ -1,9 +1,8 @@
-import '../style/Header.css';
-
+import '../components/Header.css';
 
 const Header = ({ handleMenuItemClick }) => {
     return (
-        <section className="about-section photo-section">
+        <section id="employees-section" className="about-section photo-section">
             <div className="container">
                 <div className="background-overlay">
                     <div className="about-content">
@@ -20,4 +19,3 @@ const Header = ({ handleMenuItemClick }) => {
 };
 
 export default Header;
-

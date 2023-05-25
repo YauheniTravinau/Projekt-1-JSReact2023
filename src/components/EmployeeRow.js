@@ -1,7 +1,8 @@
-import '../style/EmployeeRow.css';
+import '../components/EmployeeRow.css';
 
 const EmployeeRow = ({ name, surname, position, description, photo, isRightAligned }) => {
-    const alignmentClass = isRightAligned ? 'right-align' : '';
+    const isOddIndex = isRightAligned && isRightAligned % 2 !== 0;
+    const alignmentClass = isOddIndex ? 'right-align' : '';
 
     return (
         <div className={`employee-row ${alignmentClass}`}>

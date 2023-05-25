@@ -1,11 +1,11 @@
 import OfferBox from '../components/OfferBox';
 import offers from '../data/offers';
-import '../style/OfferSection.css';
+import '../components/OfferSection.css';
 
 const OfferSection = () => {
     return (
-        <section className="offer-section">
-            <div className="container" id="offer-section">
+        <section id="offer-section" className="offer-section">
+            <div className="container">
                 <h2>Lista ofert</h2>
                 <div className="offer-grid">
                     {offers.map((offer) => (

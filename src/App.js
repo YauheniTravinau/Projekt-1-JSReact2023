@@ -25,10 +25,9 @@ const App = () => {
             <Navigation
                 isMenuOpen={isMenuOpen}
                 handleMenuToggle={toggleMenu}
-                handleMenuItemClick={handleMenuItemClick}
             />
-            <Header handleMenuItemClick={handleMenuItemClick} id="about-section" />
-            <EmployeeSection />
+            <Header handleMenuItemClick={handleMenuItemClick} />
+            <EmployeeSection id="employees-section" />
             <OfferSection id="offer-section" />
             <Footer />
         </div>

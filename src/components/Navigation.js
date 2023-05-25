@@ -1,28 +1,13 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import '../style/Navigation.css';
+import '../components/Navigation.css';
 
-const Navigation = ({ isMenuOpen, handleMenuItemClick }) => {
+const Navigation = ({ isMenuOpen }) => {
     const [menuOpen, setMenuOpen] = useState(isMenuOpen);
-    const [activeSection, setActiveSection] = useState('');
 
     const toggleMenu = () => {
         setMenuOpen((prevState) => !prevState);
-    };
-
-    const handleClick = (sectionId) => {
-        handleMenuItemClick(sectionId);
-        if (sectionId === 'about-section') {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth',
-            });
-        }
-    };
-
-    const handleSectionChange = (sectionId) => {
-        setActiveSection(sectionId);
     };
 
     return (
@@ -36,38 +21,15 @@ const Navigation = ({ isMenuOpen, handleMenuItemClick }) => {
                     <div className={`menu-items ${menuOpen ? 'open' : ''}`}>
                         <ul>
                             <li>
-                                <a
-                                    href="#about-section"
-                                    className={activeSection === 'about-section' ? 'active' : ''}
-                                    onClick={() => {
-                                        handleClick('about-section');
-                                        handleSectionChange('about-section');
-                                    }}
-                                >
+                                <a href="#employees-section" className="active">
                                     O nas
                                 </a>
                             </li>
                             <li>
-                                <a
-                                    href="#offer-section"
-                                    className={activeSection === 'offer-section' ? 'active' : ''}
-                                    onClick={() => {
-                                        handleClick('offer-section');
-                                        handleSectionChange('offer-section');
-                                    }}
-                                >
-                                    Oferta
-                                </a>
+                                <a href="#offer-section">Oferta</a>
                             </li>
                             <li>
-                                <a
-                                    href="#contact-section"
-                                    className={`${
-                                        activeSection === 'contact-section' ? 'active' : 'disabled'
-                                    }`}
-                                    onClick={() => handleClick('contact-section')}
-                                    disabled
-                                >
+                                <a href="#contact-section" className="disabled">
                                     Kontakt
                                 </a>
                             </li>
