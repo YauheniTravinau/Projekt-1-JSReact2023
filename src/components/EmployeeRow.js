@@ -1,7 +1,8 @@
+import React from 'react';
 import '../components/EmployeeRow.css';
 
 const EmployeeRow = ({ name, surname, position, description, photo, isRightAligned }) => {
-    const isOddIndex = isRightAligned && isRightAligned % 2 !== 0;
+    const isOddIndex = isRightAligned % 2 !== 0;
     const alignmentClass = isOddIndex ? 'right-align' : '';
 
     return (

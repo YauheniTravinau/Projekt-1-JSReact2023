@@ -1,3 +1,4 @@
+import React from 'react';
 import EmployeeRow from '../components/EmployeeRow';
 import employees from '../data/employees';
 import '../components/EmployeeSection.css';
@@ -15,7 +16,7 @@ const EmployeeSection = () => {
                         position={employee.position}
                         description={employee.description}
                         photo={employee.photo}
-                        isRightAligned={index === 1}
+                        isRightAligned={index % 2 !== 0}
                     />
                 ))}
             </div>
