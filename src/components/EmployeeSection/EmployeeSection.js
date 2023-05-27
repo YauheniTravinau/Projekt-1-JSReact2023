@@ -1,7 +1,7 @@
 import React from 'react';
-import EmployeeRow from '../components/EmployeeRow/EmployeeRow';
-import employees from '../data/employees';
-import '../components/EmployeeSection/EmployeeSection.css';
+import EmployeeRow from '../EmployeeRow/EmployeeRow';
+import employees from '../../data/employees';
+import '../EmployeeSection/EmployeeSection.css';
 
 const EmployeeSection = () => {
     return (

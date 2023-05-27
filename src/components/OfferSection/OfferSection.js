@@ -1,6 +1,6 @@
-import OfferBox from '../components/OfferBox/OfferBox';
-import offers from '../data/offers';
-import '../components/OfferSection/OfferSection.css';
+import OfferBox from '../OfferBox/OfferBox';
+import offers from '../../data/offers.js';
+import '../OfferSection/OfferSection.css';
 
 const OfferSection = () => {
     return (

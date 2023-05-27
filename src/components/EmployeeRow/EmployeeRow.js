@@ -1,4 +1,4 @@
-import '../components/EmployeeRow/EmployeeRow.css';
+import '../EmployeeRow/EmployeeRow.css';
 
 const EmployeeRow = ({ name, surname, position, description, photo, isRightAligned }) => {
     const isOddIndex = isRightAligned % 2 !== 0;
