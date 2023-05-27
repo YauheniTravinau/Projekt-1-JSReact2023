@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Navigation from './components/Navigation';
-import Header from './components/Header';
-import EmployeeSection from './components/EmployeeSection';
-import OfferSection from './components/OfferSection';
-import Footer from './components/Footer';
+import Navigation from './components/Navigation/Navigation';
+import Header from './components/Header/Header';
+import EmployeeSection from './components/EmployeeSection/EmployeeSection';
+import OfferSection from './components/OfferSection/OfferSection';
+import Footer from './components/Footer/Footer';
 import './styles.css';
 
 const App = () => {

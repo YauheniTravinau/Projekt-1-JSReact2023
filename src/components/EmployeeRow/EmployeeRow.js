@@ -1,5 +1,4 @@
-import React from 'react';
-import '../components/EmployeeRow.css';
+import '../components/EmployeeRow/EmployeeRow.css';
 
 const EmployeeRow = ({ name, surname, position, description, photo, isRightAligned }) => {
     const isOddIndex = isRightAligned % 2 !== 0;

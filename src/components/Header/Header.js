@@ -1,4 +1,4 @@
-import '../components/Header.css';
+import '../components/Header/Header.css';
 
 const Header = ({ handleMenuItemClick }) => {
     return (

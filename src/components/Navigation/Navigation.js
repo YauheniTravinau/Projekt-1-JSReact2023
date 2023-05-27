@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import '../components/Navigation.css';
+import '../components/Navigation/Navigation.css';
 
 const Navigation = ({ isMenuOpen }) => {
     const [menuOpen, setMenuOpen] = useState(isMenuOpen);

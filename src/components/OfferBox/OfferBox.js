@@ -1,4 +1,4 @@
-import '../components/OfferBox.css';
+import '../components/OfferBox/OfferBox.css';
 
 const OfferBox = ({ isNew, title, description }) => {
     return (
